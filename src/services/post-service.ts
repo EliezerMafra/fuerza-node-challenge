@@ -7,10 +7,16 @@ export class PostService{
 	){}
 
 	createPost(post: PostModel){
+		if(!post.title){
+			throw new Error("Post title not provided")
+		}
+		if(!post.body){
+			throw new Error("Post body not provided")
+		}
 		this.PostRepository.createPost(post)
 	}
 
-	async getAllPosts(pageSize: number, page: number){
+	async getAllPosts(pageSize?: number, page?: number){
 		return await this.PostRepository.getAllPosts(pageSize, page)
 	}
 
@@ -19,10 +25,22 @@ export class PostService{
 	}
 
 	updatePost(id: string, post: PostModel){
+		if(!id){
+			throw new Error("Post id not provided")
+		}
+		if(!post.title){
+			throw new Error("Post title not provided")
+		}
+		if(!post.body){
+			throw new Error("Post body not provided")
+		}
 		this.PostRepository.updatePost(id, post)
 	}
 
 	deletePost(id: string){
+		if(!id){
+			throw new Error("Post id not provided")
+		}
 		this.PostRepository.deletePost(id)
 	}
 }
