@@ -11,8 +11,12 @@ export class MongoDBPostRepository implements PostRepository{
 			}
 		})
 	}
-	async getAllPosts(pageSize: number, page: number){
-		return await PostModelMongoose.find({}).limit(pageSize).skip(pageSize * page).exec()
+	async getAllPosts(pageSize?: number, page?: number){
+		if(page && pageSize) {
+			return await PostModelMongoose.find({}).limit(pageSize).skip(pageSize * page).exec()
+		}else{
+			return await PostModelMongoose.find({}).exec()
+		}
 	}
 	async getPost(id: string){
 		return await PostModelMongoose.findById(id).exec()
