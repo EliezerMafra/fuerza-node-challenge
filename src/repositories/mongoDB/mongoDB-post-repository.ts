@@ -7,7 +7,7 @@ export class MongoDBPostRepository implements PostRepository{
 
 		newPost.save((err) => {
 			if(err) {
-				throw new Error("Error creating post: " + err)
+				console.error(err)
 			}
 		})
 	}
@@ -30,20 +30,14 @@ export class MongoDBPostRepository implements PostRepository{
 	updatePost(id: string, post: PostModel){
 		PostModelMongoose.findByIdAndUpdate(id, {$set: post},(err: String, post: PostModel) => {
 			if(err){
-				throw new Error("Error updating post: " + err)
-			}
-			if(!post){
-				throw new Error("Error updating the post: id: " + id + " does not exist")
+				console.error(err)
 			}
 		})
 	}
 	deletePost(id: string){
 		PostModelMongoose.findByIdAndDelete(id, (err: String, post: PostModel) => {
 			if(err){
-				throw new Error("Error deleting post: " + err)
-			}
-			if(!post){
-				throw new Error("Error deleting the post: id: " + id + " does not exist")
+				console.error(err)
 			}
 		})
 	}
