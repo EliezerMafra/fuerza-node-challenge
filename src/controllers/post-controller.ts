@@ -21,7 +21,11 @@ export class PostController{
 	
 			res.status(201).send()
 		}catch(err){
-			res.status(400).send(err)
+			if (err instanceof Error) {
+				res.status(400).send(err.message)
+			}else{
+				res.status(400).send("Unexpected error !!!")
+			}
 		}
 	}
 
@@ -36,7 +40,11 @@ export class PostController{
 	
 			res.status(200).send(await service.getAllPosts(pageSize, page))
 		}catch(err){
-			res.status(400).send(err)
+			if (err instanceof Error) {
+				res.status(400).send(err.message)
+			}else{
+				res.status(400).send("Unexpected error !!!")
+			}
 		}
 	}
 
@@ -50,7 +58,11 @@ export class PostController{
 	
 			res.status(200).send(await service.getPost(id))
 		}catch(err){
-			res.status(400).send(err)
+			if (err instanceof Error) {
+				res.status(400).send(err.message)
+			}else{
+				res.status(400).send("Unexpected error !!!")
+			}
 		}
 	}
 
@@ -67,7 +79,11 @@ export class PostController{
 	
 			res.status(202).send()
 		}catch(err){
-			res.status(400).send(err)
+			if (err instanceof Error) {
+				res.status(400).send(err.message)
+			}else{
+				res.status(400).send("Unexpected error !!!")
+			}
 		}
 	}
 	static deletePost = (req: Request, res: Response) => {
@@ -82,7 +98,11 @@ export class PostController{
 	
 			res.status(202).send()
 		}catch(err){
-			res.status(400).send(err)
+			if (err instanceof Error) {
+				res.status(400).send(err.message)
+			}else{
+				res.status(400).send("Unexpected error !!!")
+			}
 		}
 	}
 }

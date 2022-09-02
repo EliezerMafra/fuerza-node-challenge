@@ -12,19 +12,28 @@ export class MongoDBPostRepository implements PostRepository{
 		})
 	}
 	async getAllPosts(pageSize?: number, page?: number){
-		if(page && pageSize) {
+		if((typeof page != 'undefined') && (typeof pageSize != 'undefined')) {
 			return await PostModelMongoose.find({}).limit(pageSize).skip(pageSize * page).exec()
 		}else{
 			return await PostModelMongoose.find({}).exec()
 		}
 	}
 	async getPost(id: string){
-		return await PostModelMongoose.findById(id).exec()
+		const post =  await PostModelMongoose.findById(id).exec()
+
+		if(!post){
+			throw new Error("Error getting post: id: " + id + " does not exist")
+		}
+
+		return post
 	}
 	updatePost(id: string, post: PostModel){
 		PostModelMongoose.findByIdAndUpdate(id, {$set: post},(err: String, post: PostModel) => {
 			if(err){
 				throw new Error("Error updating post: " + err)
+			}
+			if(!post){
+				throw new Error("Error updating the post: id: " + id + " does not exist")
 			}
 		})
 	}
@@ -32,6 +41,9 @@ export class MongoDBPostRepository implements PostRepository{
 		PostModelMongoose.findByIdAndDelete(id, (err: String, post: PostModel) => {
 			if(err){
 				throw new Error("Error deleting post: " + err)
+			}
+			if(!post){
+				throw new Error("Error deleting the post: id: " + id + " does not exist")
 			}
 		})
 	}
