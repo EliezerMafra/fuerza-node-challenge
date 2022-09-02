@@ -10,8 +10,8 @@ export class PostService{
 		this.PostRepository.createPost(post)
 	}
 
-	async getAllPosts(){
-		return await this.PostRepository.getAllPosts()
+	async getAllPosts(pageSize: number, page: number){
+		return await this.PostRepository.getAllPosts(pageSize, page)
 	}
 
 	async getPost(id: string){

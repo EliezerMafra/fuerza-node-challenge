@@ -22,11 +22,14 @@ export class PostController{
 	}
 
 	static getAllPosts = async (req: Request, res: Response) => {
+		const pageSize = (typeof req.query.pageSize === 'string') ? parseInt(req.query.pageSize) : 0;
+    	const page = (typeof req.query.page === 'string') ? parseInt(req.query.page) : 0;
+
 		const service = PostController.getService()
 
 		console.log(getMessage(new Date) + 'Getting all POSTS')
 
-		res.status(200).send(await service.getAllPosts())
+		res.status(200).send(await service.getAllPosts(pageSize, page))
 	}
 
 	static getPost = async (req: Request, res: Response) => {
