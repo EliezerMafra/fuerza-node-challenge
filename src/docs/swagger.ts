@@ -26,6 +26,7 @@ export default {
 			"post": {
 				"summary": "Create a new post",
 				"description": "This route/method creates a new post on the database",
+				"security": [{ "bearerAuth": [] }],
 				"tags": ["Post"],
 				"requestBody": {
 					"content": {
@@ -75,6 +76,7 @@ export default {
 			"get": {
 				"summary": "Get all posts",
 				"description": "This route/method gets all posts from the database with or without pagination",
+				"security": [{ "bearerAuth": [] }],
 				"tags": ["Post"],
 				"parameters": [
 					{
@@ -114,6 +116,7 @@ export default {
 			"get": {
 				"summary": "Get post by id",
 				"description": "This route/method gets the post with the id specified",
+				"security": [{ "bearerAuth": [] }],
 				"tags": ["Post"],
 				"parameters": [
 					{
@@ -143,6 +146,7 @@ export default {
 			"put": {
 				"summary": "Update post by id",
 				"description": "This route/method updates the post with the id specified",
+				"security": [{ "bearerAuth": [] }],
 				"tags": ["Post"],
 				"parameters": [
 					{
@@ -200,6 +204,7 @@ export default {
 			"delete": {
 				"summary": "Delete post by id",
 				"description": "This route/method deletes the post with the id specified",
+				"security": [{ "bearerAuth": [] }],
 				"tags": ["Post"],
 				"parameters": [
 					{
@@ -230,6 +235,9 @@ export default {
 					"tags": { "type": "array", "items": { "type": "string" } }
 				}
 			}
-		}
+		},
+		"securitySchemes": {
+			"bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" }
+		  }
 	}
 }
