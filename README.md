@@ -1,90 +1,58 @@
-# Backend Challenge
+<h1 align='center'>🔗 Fuerza NodeJS Backend Challenge 🔗</h1> 
 
-The project is a simple challenge to test your skills in building APIs using the Node.js framework.
+## 💻 Description
 
-### Submission
+The project is a simple challenge to test my skills in building APIs using the Node.js framework.
 
-- [ ] Read the description, requirements, and the others instructions
+## 📜 Documentation
 
-### What to do
+The project documentation was done using Swagger and can be accessed on the route: <kbd>/api-docs</kbd>
 
-- Create a simple API to manage the system of posts (CRUD).
+## ⚙️ Installation
+1. Clone the repository
+1. Change to the repository directory
+1. Install the dependencies by running the following command
+   ```shell
+    npm i
+    ```
+1. Create a <kbd>.env</kbd> file on the root directory following the <kbd>.env.example</kbd> file
 
-**This API should allow to:**
+	PS.: **If you are the code reviewer, the database credentials will be send to the recruiter**
 
-| Method | Name | Route |
-| ------ | ------ | ------ |
-| POST | Create Post | /api/posts |
-| GET | Listing Posts | /api/posts |
-| GET | Get Post By ID | /api/posts/:id |
-| PUT | Edit Post | /api/posts/:id |
-| DELETE | Delete Post | /api/posts/:id |
+## ⚒ Testing
 
-**The post must have the following fields:**
+1. After following the steps above, run the following command
+   ```shell
+    npm test
+    ```
+1. The test nutshell will be visible on the command line but it can also be accessed on the <kbd>coverage/lcov-report/index.html</kbd> file that will be created on the repository root diretory. Open it on your browser
 
-| Field | Type |
-| ------ | ------ |
-| id | UUID |
-| title | string |
-| body | string |
-| tags | string[] |
+## 🚀 Running the TypeScript server in a Development Environment
 
-### Requirements
+1. Run the following command
+	```shell
+	npm run dev
+	```
 
-- [ ] All API responses must be in JSON format.
-- [ ] Add pagination on the API for the listing of the posts
-- [ ] Provide the unit testing for all routes using Mocha and Chai or your preferred testing framework.
-- [ ] Provide documentation for all routes, we preferer using Swagger API, but you can using README for documentation.
-- [ ] Provide a README file with usage instructions (how to the runs, considerations, etc...).
-- [ ] Use naming written as camelCase by convention.
+## 🚀 Running the JavaScript server in the Node Environment
 
-#### - **The folders structures of the project should be following the example below.**
+1. Run the following command to compile the TypeScript code
+	```shell
+	npm run build
+	```
+2. Run the server JavaScript compiled version
+   	```shell
+	node ./dist/server.js
+	```
 
-```sh
-├── src
-│   ├── controllers
-│   │   └── posts
-│   ├── helpers
-│   │   └── utils.js
-│   ├── models
-│   │   └── post.js
-│   ├── routes
-│   │   └── api
-│   │       ├── posts.js
-│   │       └── index.js
-│   └── app.js
-├── test
-│   └── posts
-├── .editorconfig
-├── .gitignore
-├── package.json
-└── readme.md
-```
+## 📃 Requirements
 
-#### Any routes should process the response in the controllers, no use function directly in the routes.
-
-- See example below
-
-![basic structure](https://i.imgur.com/lyRSYj8.png)
-
-### Data Persistence
-
-- [ ] You will need to persist the data in some way, maybe in memory.
-- [ ] You don't need to use any external data persistence (database, cache, etc.), and the easier it is for us to run it, is better.
-
-### Evaluation
-
-- [ ] Architecture
-- [ ] Automated tests
-- [ ] Functionalities of the APIs
-- [ ] Programming good practices
-- [ ] Project organization
-- [ ] Structure componentization
-- [ ] Clean code with camelcase pattern
-
-### Bonus Level Up
-
-- [ ] Authenticated the routes using JWT
-- [ ] Process and validate the data that the API receives before creating the post.
-- [ ] Using MongoDB for storage data
-- [ ] Using Swagger API documentation
+- [X] All API responses must be in JSON format.
+- [X] Add pagination on the API for the listing of the posts
+- [X] Provide the unit testing for all routes using Mocha and Chai or your preferred testing framework.
+- [X] Provide documentation for all routes, we preferer using Swagger API, but you can using README for documentation.
+- [X] Provide a README file with usage instructions (how to the runs, considerations, etc...).
+- [X] Use naming written as camelCase by convention.
+- [X] Process and validate the data that the API receives before creating the post.
+- [X] Using MongoDB for storage data
+- [X] Using Swagger API documentation
