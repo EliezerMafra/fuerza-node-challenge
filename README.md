@@ -15,7 +15,6 @@ The project is a simple challenge to test my skills in building APIs using the N
 - [X] Process and validate the data that the API receives before creating the post.
 - [X] Using MongoDB for storage data
 - [X] Using Swagger API documentation
-- [X] Authenticated the routes using JWT
 
 ## 📜 Documentation
 
