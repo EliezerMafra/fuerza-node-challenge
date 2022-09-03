@@ -38,7 +38,7 @@ export class PostController{
 	
 			console.log(getMessage(new Date) + 'Getting all POSTS')
 	
-			res.status(200).send(await service.getAllPosts(pageSize, page))
+			res.status(200).json(await service.getAllPosts(pageSize, page))
 		}catch(err){
 			if (err instanceof Error) {
 				res.status(400).send(err.message)
@@ -56,7 +56,7 @@ export class PostController{
 	
 			console.log(getMessage(new Date) + 'Getting POSTS with the id: ' + JSON.stringify(id));
 	
-			res.status(200).send(await service.getPost(id))
+			res.status(200).json(await service.getPost(id))
 		}catch(err){
 			if (err instanceof Error) {
 				res.status(400).send(err.message)
