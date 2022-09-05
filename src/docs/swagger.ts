@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 const port = parseInt(process.env.PORT||'3030')
 
 const server_ip = process.env.SERVER_IP || 'localhost'
@@ -38,26 +40,38 @@ export default {
 								"Right post with tags":{
 									"value": {
 										"title": "Post 1 Title",
-										"body": "Post 1 Body",
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere.",
 										"tags": ["tag1", "tag2", "tag3"]
 									}
 								},
 								"Right post without tags":{
 									"value": {
 										"title": "Post 2 Title",
-										"body": "Post 2 Body"
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
 									}
 								},
 								"Wrong post without title":{
 									"value": {
 										"title": "",
-										"body": "Post 3 Body"
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
 									}
 								},
 								"Wrong post without body":{
 									"value": {
 										"title": "Post 4 Title",
 										"body": ""
+									}
+								},
+								"Wrong post with short title":{
+									"value": {
+										"title": "Post5",
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
+									}
+								},
+								"Wrong post with short body":{
+									"value": {
+										"title": "Post 5 Title",
+										"body": "Lorem"
 									}
 								}
 							}
@@ -175,26 +189,38 @@ export default {
 								"Right post with tags":{
 									"value": {
 										"title": "Post 1 Title",
-										"body": "Post 1 Body",
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere.",
 										"tags": ["tag1", "tag2", "tag3"]
 									}
 								},
 								"Right post without tags":{
 									"value": {
 										"title": "Post 2 Title",
-										"body": "Post 2 Body"
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
 									}
 								},
 								"Wrong post without title":{
 									"value": {
 										"title": "",
-										"body": "Post 3 Body"
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
 									}
 								},
 								"Wrong post without body":{
 									"value": {
 										"title": "Post 4 Title",
 										"body": ""
+									}
+								},
+								"Wrong post with short title":{
+									"value": {
+										"title": "Post5",
+										"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis aliquam tellus, id vehicula diam fringilla sed. Sed consequat augue bibendum, egestas turpis vel, viverra velit. Aenean non erat finibus ex luctus laoreet eget nec magna. Maecenas pharetra, ante non tristique pretium, sapien lectus condimentum urna, finibus semper metus est eu dui. Praesent et rutrum neque. Praesent efficitur ornare commodo. Donec facilisis nulla interdum nisi venenatis interdum. Proin nec lectus nisl. Vestibulum quis congue nulla. Nullam lacinia dolor eget elit aliquet iaculis. Curabitur consectetur accumsan felis at posuere."
+									}
+								},
+								"Wrong post with short body":{
+									"value": {
+										"title": "Post 5 Title",
+										"body": "Lorem"
 									}
 								}
 							}
