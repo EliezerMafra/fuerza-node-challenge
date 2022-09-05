@@ -99,13 +99,13 @@ export default {
 					{
 						"in": "query",
 						"name": "page",
-						"description": "The number of the desired page",
+						"description": "The number of the desired page [default value: 0]",
 						"required": false
 					},
 					{
 						"in": "query",
 						"name": "pageSize",
-						"description": "Quantity of posts in each page",
+						"description": "Quantity of posts in each page [default value: 20]",
 						"required": false
 					}
 				],
