@@ -22,7 +22,7 @@ The project documentation was done using Swagger and can be accessed on the rout
 
 ## 🧩 Project Structure
 
-The folder structure was modificated a little bit to provide more **decoupling** to the project:
+The folder structure was modified to provide more **decoupling** to the project:
 **The <kbd>Model</kbd> step was divided into <kbd>Service</kbd>, <kbd>Repository</kbd> , and <kbd>Model</kbd>**
 
 
