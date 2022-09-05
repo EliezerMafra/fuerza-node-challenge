@@ -19,7 +19,7 @@ export default {
 	},
 	"servers": [
 		{
-			"url": server_ip + ":" + port,
+			"url": server_ip,
 			"description": "Test API"
 		}
 	],
