@@ -65,11 +65,14 @@ export default {
 					}
 				},
 				"responses": {
-					"200": {
+					"201": {
 						"description": "Created: New post created"
 					},
 					"400": {
 						"description": "Bad Request: It was not possible to create a new post"
+					},
+					"401": {
+						"description": "Unauthorized: provide the right API token"
 					}
 				}
 			},
@@ -108,6 +111,9 @@ export default {
 					},
 					"400": {
 						"description": "Bad Request: It was not possible to get the posts"
+					},
+					"401": {
+						"description": "Unauthorized: provide the right API token"
 					}
 				}
 			}
@@ -140,6 +146,9 @@ export default {
 					},
 					"400": {
 						"description": "Bad Request: It was not possible to get the post"
+					},
+					"401": {
+						"description": "Unauthorized: provide the right API token"
 					}
 				}
 			},
@@ -198,6 +207,9 @@ export default {
 					},
 					"400": {
 						"description": "Bad Request: It was not possible to update the post"
+					},
+					"401": {
+						"description": "Unauthorized: provide the right API token"
 					}
 				}
 			},
@@ -220,6 +232,9 @@ export default {
 					},
 					"400": {
 						"description": "Bad Request: It was not possible to delete the post"
+					},
+					"401": {
+						"description": "Unauthorized: provide the right API token"
 					}
 				}
 			}
