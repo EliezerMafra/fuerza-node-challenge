@@ -13,12 +13,14 @@ export class PostService{
 		if(!post.body){
 			throw new Error("Post body was not provided")
 		}
+
 		if(post.title.length < 6){
 			throw new Error("Title is too short")
 		}
 		if(post.body.length < 50){
 			throw new Error("Write at least 50 characters on the body")
 		}
+
 		this.PostRepository.createPost(post)
 	}
 
@@ -39,6 +41,13 @@ export class PostService{
 		}
 		if(!post.body){
 			throw new Error("Post body was not provided")
+		}
+
+		if(post.title.length < 6){
+			throw new Error("Title is too short")
+		}
+		if(post.body.length < 50){
+			throw new Error("Write at least 50 characters on the body")
 		}
 		this.PostRepository.updatePost(id, post)
 	}
