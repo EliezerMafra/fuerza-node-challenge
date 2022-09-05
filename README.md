@@ -20,6 +20,7 @@ The project is a simple challenge to test my skills in building APIs using the N
 ## 📜 Documentation
 
 The project documentation was done using Swagger and can be accessed on the route: <kbd>/api-docs</kbd>
+
 You can also access the documentation on a public domain here: [Swagger documentation](https://fuerza-node-challenge-production.up.railway.app/api-docs/)
 
 ## 🧩 Project Structure
