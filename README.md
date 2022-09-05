@@ -20,12 +20,17 @@ The project is a simple challenge to test my skills in building APIs using the N
 ## 📜 Documentation
 
 The project documentation was done using Swagger and can be accessed on the route: <kbd>/api-docs</kbd>
+You can also access the documentation on a public domain here: [Swagger documentation](https://fuerza-node-challenge-production.up.railway.app/api-docs/)
 
 ## 🧩 Project Structure
 
 The folder structure was modified to provide more **decoupling** to the project:
 **The <kbd>Model</kbd> step was divided into <kbd>Service</kbd>, <kbd>Repository</kbd> , and <kbd>Model</kbd>**
 
+
+## 🎯 Run without installation
+
+You can make requests to the API with the following base URL: <kbd>https://fuerza-node-challenge-production.up.railway.app</kbd>
 
 ## ⚙️ Installation
 1. Clone the repository
