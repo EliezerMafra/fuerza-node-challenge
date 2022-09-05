@@ -8,10 +8,16 @@ export class PostService{
 
 	createPost(post: PostModel){
 		if(!post.title){
-			throw new Error("Post title not provided")
+			throw new Error("Post title was not provided")
 		}
 		if(!post.body){
-			throw new Error("Post body not provided")
+			throw new Error("Post body was not provided")
+		}
+		if(post.title.length < 6){
+			throw new Error("Title is too short")
+		}
+		if(post.body.length < 50){
+			throw new Error("Write at least 50 characters on the body")
 		}
 		this.PostRepository.createPost(post)
 	}
@@ -26,20 +32,20 @@ export class PostService{
 
 	updatePost(id: string, post: PostModel){
 		if(!id){
-			throw new Error("Post id not provided")
+			throw new Error("Post id was not provided")
 		}
 		if(!post.title){
-			throw new Error("Post title not provided")
+			throw new Error("Post title was not provided")
 		}
 		if(!post.body){
-			throw new Error("Post body not provided")
+			throw new Error("Post body was not provided")
 		}
 		this.PostRepository.updatePost(id, post)
 	}
 
 	deletePost(id: string){
 		if(!id){
-			throw new Error("Post id not provided")
+			throw new Error("Post id was not provided")
 		}
 		this.PostRepository.deletePost(id)
 	}
