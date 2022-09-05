@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 const port = parseInt(process.env.PORT||'3030')
 
-const server_ip = process.env.SERVER_IP || 'localhost'
+const server_ip = process.env.RAILWAY_HOST_URL || 'localhost'
 
 
 export default {
