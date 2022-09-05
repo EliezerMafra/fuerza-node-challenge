@@ -60,5 +60,5 @@ The folder structure was modified to provide more **decoupling** to the project:
 	```
 2. Run the server JavaScript compiled version
    	```shell
-	node ./dist/server.js
+	npm start
 	```
